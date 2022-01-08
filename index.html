@@ -5,28 +5,37 @@
     <title>Title</title>
 
 <body>
+<input type="number" id="thang" placeholder="Nhập tháng" >
+<button onclick="ketqua()">Tính số ngày</button>
+<br>
+<p id="result"></p>
 
-
-</body>
 <script>
-    let height = +prompt("Nhap chieu cao");
-    let weight = +prompt("Nhap can nang");
-    let bmi ;
-console.log("height = ", height)
-    console.log(" weight =" , weight)
-    bmi = weight / (height * height)
-console.log("bmi = ", bmi);
-    if (bmi < 18) {
-        document.write("Underweight");
-    } else if (bmi < 25.0) {
-        document.write("Normal");
-    } else if (bmi < 30.0) {
-        document.write("Overweight");
-    } else {
-        document.write("Obese");
+    function ketqua() {
+        let month = +document.getElementById("thang").value;
+
+        switch (month) {
+            case 1:
+            case 3:
+
+                document.write("thang có 31 ngay");
+                break;
+            case 2:
+                document.write("thang 2 co 28 hoac 29 ngay");
+                break;
+            case 4:
+                document.write("thang co 30 ngay");
+                break;
+            default:
+                document.write("Nhap sai");
+        break;
+
+        }
     }
 
-
 </script>
+
+</body>
+
 
 </html>

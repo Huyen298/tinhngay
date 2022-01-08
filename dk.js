@@ -1,8 +1,8 @@
-function kiemtra() {
-    let traloi = document.getElementById("answer").innerText;
+function gui() {
+    let answer = document.getElementById("answer").innerText;
     let result="";
 
-    if (traloi== “ECMAScript”){
+    if (answer == “ECMAScript”){
         result= "right";
     }
     else{
